@@ -1,19 +1,27 @@
-document.getElementById('signup-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const email = document.getElementById('email').value.trim();
-  const errorDiv = document.getElementById('error-message');
-  const successDiv = document.getElementById('success-message');
-  errorDiv.textContent = '';
-  successDiv.style.display = 'none';
+// Animate progress bars on scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const progressBars = document.querySelectorAll('.progress');
+    
+    const animateOnScroll = () => {
+        progressBars.forEach(bar => {
+            const rect = bar.getBoundingClientRect();
+            if(rect.top < window.innerHeight) {
+                bar.style.width = bar.style.width;
+            }
+        });
+    };
 
-  // Simple email validation
-  const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
-  if (!emailPattern.test(email)) {
-    errorDiv.textContent = 'Please enter a valid email address.';
-    return;
-  }
+    window.addEventListener('scroll', animateOnScroll);
+    animateOnScroll(); // Initial check
+});
 
-  // Simulate successful submission
-  document.getElementById('signup-form').reset();
-  successDiv.style.display = 'block';
+// Course category hover effects
+document.querySelectorAll('.category-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-5px)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
+    });
 });
