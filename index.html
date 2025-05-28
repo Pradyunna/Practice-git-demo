@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Awesome Landing Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to AwesomeApp</h1>
+    <p>The easiest way to boost your productivity and manage your tasks effortlessly.</p>
+  </header>
+
+  <section class="features">
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/4f8cff/light-on--v1.png" alt="Easy to Use"/>
+      <h3>Easy to Use</h3>
+      <p>Intuitive interface designed for everyone. Get started in seconds!</p>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/4f8cff/lock-2.png" alt="Secure"/>
+      <h3>Secure</h3>
+      <p>Your data is encrypted and protected with industry-leading security.</p>
+    </div>
+    <div class="feature">
+      <img src="https://img.icons8.com/ios-filled/50/4f8cff/rocket--v1.png" alt="Fast Performance"/>
+      <h3>Fast Performance</h3>
+      <p>Lightning-fast loading times so you can focus on what matters.</p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Get Early Access</h2>
+    <p>Sign up now and be the first to know when we launch!</p>
+    <form id="signup-form" autocomplete="off">
+      <input type="email" id="email" placeholder="Enter your email" required>
+      <button type="submit">Notify Me</button>
+      <div class="error-message" id="error-message"></div>
+    </form>
+    <div class="success-message" id="success-message" style="display:none;">
+      Thank you! We'll keep you posted.
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
